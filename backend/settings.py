@@ -36,7 +36,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = [*]
 # If you turned cors_origin allow all off
-ALLOWED_HOSTS = ["finaltestyo.herokuapp.com", "locahost"]
+ALLOWED_HOSTS = ["finaltestyo.herokuapp.com", "locahost", "127.0.0.1:8000"]
 
 
 # Application definition
