@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from stats import views
+from .views import index
 
 router = routers.DefaultRouter()
 router.register(r'stats', views.StatsView, 'stat')
@@ -25,6 +26,7 @@ router.register(r'stats', views.StatsView, 'stat')
 # CRUD
 
 urlpatterns = [
+    path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
 ]
