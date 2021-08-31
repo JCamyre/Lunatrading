@@ -24,6 +24,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <img
+          alt="T1"
+          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FC4pJkvsUMAA09-u.jpg%3Alarge&f=1&nofb=1"
+        />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
