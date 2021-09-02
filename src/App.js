@@ -54,20 +54,6 @@ Navbar, Stock, .container, .footer {
 function App() {
   const theme = useTheme();
 
-  // const getStats = () => {
-  //   // http://localhost:8000 don't need cause of the proxy value in package.json
-  //   axios.get("/api/stats/").then((data) => {
-  //     if (data) {
-  //       console.log(data);
-  //       return data;
-  //     }
-  //   });
-  };
-
-  useEffect(() => {
-    getStats();
-  }, []);
-
   return (
     <ThemeProvider theme={theme}>
       <>
