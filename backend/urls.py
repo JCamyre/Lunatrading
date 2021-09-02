@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from stats import views
+from stocks import views
 from .views import index
 
 router = routers.DefaultRouter()
-router.register(r'stats', views.StatsView, 'stat')
+router.register(r'stocks', views.StocksView, 'stock')
 # We can now do /stats/ to access all stat objects, and we can perform create and read
-# /stats/id can do update and delete on a specific object
+# /stats/id can do update and delete on a specific object. Idk what 'stock' does.
 # CRUD
 
 urlpatterns = [
@@ -30,3 +30,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
 ]
+
+# I should redesign how the backend server does calculations. Better url names, etc.
