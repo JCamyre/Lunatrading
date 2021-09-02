@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NewsArticle from './NewsArticle.jsx';
 import DotLoader from 'react-spinners/DotLoader';
-import { useDebounce } from "../hooks/debounceHook";
+import { useDebounce } from "../../hooks/debounceHook";
 import axios from 'axios';
 
 function News(ticker) {

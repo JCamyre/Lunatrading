@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import theme from 'styled-theming';
-import { Button } from './Button';
-import ToggleMode from './ToggleMode';
+import { Button } from '../Button/Button';
+import ToggleMode from '../ToggleMode/ToggleMode';
 import './Navbar.css';
 
 export default function Navbar(props) {

@@ -5,10 +5,10 @@ import { Grid, Typography } from "@material-ui/core";
 // import Chart from '../Chart';
 // import Parallax from '../Parallax';
 // import bg_img from '../../images/bg-img-1.jpg';
-import SearchBar from "../SearchBar";
+import SearchBar from "../../SearchBar/SearchBar";
 
 export default function Home() {
-  const background_image = require("../../../../images/bg-img-3.jpg").default;
+  const background_image = require("../../../images/bg-img-3.jpg").default;
 
   return (
     <div>

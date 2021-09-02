@@ -1,5 +1,5 @@
 import React from 'react'
-import SignalButton from './SignalButton';
+import SignalButton from '../SignalButton/SignalButton';
 
 
 function Signals(props) {

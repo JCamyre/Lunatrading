@@ -7,8 +7,8 @@ import { useClickOutside } from "react-click-outside-hook";
 import { useEffect } from "react";
 import { useRef } from "react";
 import DotLoader from 'react-spinners/DotLoader';
-import { useDebounce } from "../hooks/debounceHook";
-import StockElement from './StockElement';
+import { useDebounce } from "../../hooks/debounceHook";
+import StockElement from '../StockElement/StockElement';
 import axios from 'axios';
 
 // Credit: https://github.com/ipenywis/react-candy-searchbar

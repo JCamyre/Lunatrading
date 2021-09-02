@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Grid, Typography } from "@material-ui/core";
-import StockChart from "../Chart.js";
-import News from "../News";
+import StockChart from "../../Chart/Chart";
+import News from "../../News/News";
 import DotLoader from "react-spinners/DotLoader";
-import Signals from "../Signals";
-import Rating from "../Rating";
-import InfoTable from "../StyledTable";
+import Signals from "../../Signals/Signals";
+import Rating from "../../Rating/Rating";
+import InfoTable from "../../StyledTable/StyledTable";
 
 // Change color of text depending on high/low
 const ShortF = ({ value }) => {
