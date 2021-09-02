@@ -1,12 +1,59 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import Stock from "./components/pages/Stock";
+import Navbar from "./components/Navbar";
+import About from "./components/pages/About";
+// import SignIn from "./components/pages/SignIn";
+// import SignUp from "./components/pages/SignUp";
+import ContactUs from "./components/pages/ContactUs";
+import Footer from "./components/Footer";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import storage from "local-storage-fallback";
+import useTheme from "./components/useTheme";
+import style from "styled-theming";
 import axios from "axios";
-import React, { useEffect } from "react";
+import "./App.css";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
+const getBackground = style("mode", {
+  light: "#EEE",
+  dark: "#111",
+});
+
+const getForeground = style("mode", {
+  light: "#111",
+  dark: "#EEE",
+});
+
+// const getBackgroundSecondary = style('mode', {
+//   dark: '#EEE',
+//   light: '#111'
+// });
+
+// const getForegroundSecondary = style('mode', {
+//   dark: '#111',
+//   light: '#EEE'
+// });
+
+const getFontSize = style("textZoom", {
+  normal: "1em",
+  textZoom: "1.2em",
+});
+
+const GlobalStyle = createGlobalStyle`
+Navbar, Stock, .container, .footer {
+  background-color: ${getBackground};
+  color: ${getForeground};
+  font-size: ${getFontSize};
+}
+`;
+
 function App() {
+  const theme = useTheme();
+
   const getStats = () => {
     // http://localhost:8000 don't need cause of the proxy value in package.json
     axios.get("/api/stats/").then((data) => {
@@ -22,26 +69,30 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img
-          alt="T1"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FC4pJkvsUMAA09-u.jpg%3Alarge&f=1&nofb=1"
-        />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle />
+        <Router>
+          <Navbar
+            style={{
+              transition: "all 10000ms ease 0s",
+              transitionProperty: "all",
+              transitionDuration: "10000ms",
+              transitionTimingFunction: "ease",
+              transitionDelay: "0s",
+            }}
+            theme={theme}
+          />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/stock/:ticker" component={Stock} />
+            <Route path="/about" component={About} />
+            <Route path="/contactus" component={ContactUs} />
+          </Switch>
+          <Footer />
+        </Router>
+      </>
+    </ThemeProvider>
   );
 }
 
