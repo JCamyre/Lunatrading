@@ -217,5 +217,6 @@ class GetSearchedStock(APIView):
         data = {}
         data['queried_ticker'] = sorted(
             queried_stocks, key=lambda x: x['ticker'])
+        print(data)
 
         return Response(data, status=status.HTTP_200_OK)

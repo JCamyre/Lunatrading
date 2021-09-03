@@ -13,6 +13,8 @@ import axios from 'axios';
 
 // Credit: https://github.com/ipenywis/react-candy-searchbar
 
+// Be able to search by actual company name, not just ticker.
+
 const SearchBarContainer = styled(motion.div)`
     display: flex;
     flex-direction: column;
