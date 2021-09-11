@@ -140,18 +140,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-
 # Storing static files ourself.
 # refers to other directories where Django will collect the static files as well
 # In this case, it is pointing to React's 'build/static' directory which contains the static files for frontend when Heroku builds the React app using npm run build during deployment.
 # Since the production version of django project is called "build" when running "yarn/npm run build"
+
+# points to directory/folder that stores static files
+
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
 
-# points to directory/folder that stores static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Configure Django app for Heroku
 django_heroku.settings(locals())
