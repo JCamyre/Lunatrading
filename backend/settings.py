@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # The idea here is to clear the DATABASES variable and then set the 'default' key using the dj_database_url module. This module uses Heroku’s DATABASE_URL variable if it’s on Heroku, or it uses the DATABASE_URL we set in the .env file if we’re working locally.
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
+# Know how to connect to a database normally, just add all information for the PostgreSQL server or whatever you are using to the DATABASE variable.
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
