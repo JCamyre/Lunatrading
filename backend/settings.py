@@ -34,9 +34,7 @@ SECRET_KEY = os.environ['DJANGO_REACT_HEROKU_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-# ALLOWED_HOSTS = [*]
-# If you turned cors_origin allow all off
-ALLOWED_HOSTS = ["http://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
+ALLOWED_HOSTS = ["https://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
                  "localhost", "127.0.0.1:8000"]
 
 
