@@ -36,7 +36,8 @@ DEBUG = False
 
 # ALLOWED_HOSTS = [*]
 # If you turned cors_origin allow all off
-ALLOWED_HOSTS = ["finaltestyo.herokuapp.com", "localhost", "127.0.0.1:8000"]
+ALLOWED_HOSTS = ["http://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
+                 "localhost", "127.0.0.1:8000"]
 
 
 # Application definition
@@ -48,12 +49,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'corsheaders',
+    'rest_framework',
     'stocks',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,8 +65,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 # "Serve its own static files", I'm assuming means the "slug"/program can store its own files, rather than using external serve to host and store files.
