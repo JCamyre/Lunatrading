@@ -39,7 +39,7 @@ export default function Navbar(props) {
         <nav className={navbar ? 'navbar active' : 'navbar'}>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    yo <i className="fas fa-rocket" style={{color: '#fff'}} />
+                    Luna <i className="fas fa-rocket" style={{color: '#fff'}} />
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

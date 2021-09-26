@@ -6,12 +6,22 @@ import { Grid, Typography } from "@material-ui/core";
 // import Parallax from '../Parallax';
 // import bg_img from '../../images/bg-img-1.jpg';
 import SearchBar from "../../SearchBar/SearchBar";
+import NavBar from '../../Navbar/Navbar';
 
 export default function Home() {
   const background_image = require("../../../images/bg-img-3.jpg").default;
 
   return (
     <div>
+      <NavBar
+        style={{
+          transition: "all 10000ms ease 0s",
+          transitionProperty: "all",
+          transitionDuration: "10000ms",
+          transitionTimingFunction: "ease",
+          transitionDelay: "0s",
+        }}
+      />
       <Grid container spacing={1}>
         {/* Good video for a drop down menu: https://www.youtube.com/watch?v=IF6k0uZuypA */}
         <Grid

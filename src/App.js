@@ -59,7 +59,7 @@ function App() {
       <>
         <GlobalStyle />
         <Router>
-          <Navbar
+          {/* <Navbar
             style={{
               transition: "all 10000ms ease 0s",
               transitionProperty: "all",
@@ -68,7 +68,7 @@ function App() {
               transitionDelay: "0s",
             }}
             theme={theme}
-          />
+          /> */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/stock/:ticker" component={Stock} />
