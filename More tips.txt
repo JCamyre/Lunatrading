@@ -1,0 +1,3 @@
+Mental note: 
+If issue with pipfile and not having all installed dependencies, run pipenv install -r requirements.txt, instead of pip install. 
+I'll just pipenv from now on.
