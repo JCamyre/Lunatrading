@@ -53,12 +53,13 @@ export default function Home() {
           item
           xs={12}
           align="center"
-          style={{ padding: "0px 75px", zIndex: 1 }}
+          style={{ padding: "0px 75px", zIndex: 1, alignItems: "center" }}
         >
           <div
             className="container"
             style={{
-              margin: "auto",
+              marginRight: "350px",
+              width: "1400px",
               fontWeight: "300px",
               fontFamily: ["Roboto", "Helvetica"],
               padding: "40px 60px",
@@ -77,6 +78,7 @@ export default function Home() {
               <img
                 style={{ height: "auto", width: "50%", borderRadius: "6px", padding: "0 0" }}
                 alt="nasdaq sign"
+                src={background_image2}
               />
             </Grid>
           </div>

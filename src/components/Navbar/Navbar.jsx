@@ -36,7 +36,7 @@ export default function Navbar(props) {
     window.addEventListener('scroll', changeBackground);
 
     return (
-        <nav className={navbar ? 'navbar active' : 'navbar'}>
+        <nav style={{marginRight: "200px"}} className={navbar ? 'navbar active' : 'navbar'}>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     <i className="fas fa-moon" style={{color: 'rgba(175, 0, 175)'}} /> Luna

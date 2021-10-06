@@ -154,7 +154,6 @@ export default function SearchBar() {
     if (inputRef.current) inputRef.current.value = '';
   };
 
-  // Don't know what useEffect() is doing here
   useEffect(() => {
     if (isClickedOutside) collapseContainer();
   }, [isClickedOutside]);
