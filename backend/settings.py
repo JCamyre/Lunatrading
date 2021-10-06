@@ -36,7 +36,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = [*]
 # If you turned cors_origin allow all off
-ALLOWED_HOSTS = ["finaltestyo.herokuapp.com", "localhost", "127.0.0.1:8000"]
+ALLOWED_HOSTS = ["lunatrading.herokuapp.com", "localhost", "127.0.0.1:8000"]
 
 
 # Application definition
@@ -151,7 +151,7 @@ STATICFILES_DIRS = [
 ]
 
 # points to directory/folder that stores static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'build/staticfiles')
 
 # Configure Django app for Heroku
 django_heroku.settings(locals())

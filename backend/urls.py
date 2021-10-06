@@ -18,6 +18,8 @@ from django.urls import path, include
 from rest_framework import routers
 from stocks import views
 from .views import index
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'stocks', views.StocksView, 'stock')
@@ -29,6 +31,6 @@ urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # I should redesign how the backend server does calculations. Better url names, etc.
