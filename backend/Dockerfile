@@ -1,10 +1,10 @@
 FROM ubuntu:18.04
 
-RUN apt-get update \
+RUN apt-get update -y \
 
-&& apt-get install -y python3-pip python3-dev libpq-dev \
+&& apt-get install python3-pip python3-dev libpq-dev -y \
 
-&& apt-get install vim
+&& apt-get install vim -y
 
 WORKDIR /src/backend
 

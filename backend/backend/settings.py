@@ -35,7 +35,7 @@ SECRET_KEY = os.environ['DJANGO_REACT_HEROKU_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ["https://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
-                 "localhost", "127.0.0.1:8000"]
+                 "localhost:8000", "127.0.0.1:8000", "lunatrading-env.eba-ufm72asu.us-west-1.elasticbeanstalk.com"]
 
 
 # Application definition
@@ -147,13 +147,17 @@ USE_TZ = True
 
 # points to directory/folder that stores static files
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # URL to use when referring to static files located in STATIC_ROOT. If you do {{ STATIC_URL }}css/base.css, you get static.lunatrading.com/css/base.css
+# you could also do relative url: static/css/base.css (http://yourdomain/static/css/base/css)
+# Remember Use {% load static %} ... {% static 'css/main.css' %} from Django templates
+
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
+    os.path.join(BASE_DIR, 'backend/static') # points to where the static files we want to store are at
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # points to where you want to store the staticfiles for deployment
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
