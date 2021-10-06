@@ -65,9 +65,9 @@ export default function Navbar(props) {
                             Sign Up
                         </Link>
                     </li>
-                    <li className='nav-item nav-links'>
+                    {/* <li className='nav-item nav-links'>
                         <ToggleMode />
-                    </li>
+                    </li> */}
                     {/* <li className='nav-item'>
                         <button
                             onClick={e =>

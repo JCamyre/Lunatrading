@@ -9,6 +9,7 @@ import SearchBar from "../../SearchBar/SearchBar";
 
 export default function Home() {
   const background_image = require("../../../images/bg-img-3.jpg").default;
+  const background_image2 = require("../../../images/bg-img-1.jpg").default;
 
   return (
     <div>
@@ -67,26 +68,16 @@ export default function Home() {
                 "0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%)",
             }}
           >
-            <p>Product info here.</p>
-            <Grid item xs={12} align="center">
-              <h2>YO</h2>
-            </Grid>
-            <Grid item xs={12} align="center">
-              <h5>YO</h5>
-            </Grid>
             <Grid item xs={12} align="center">
               <h3>
-                Every landing page needs a small description after the big bold
-                title, that's why we added this text here. Add here all the
-                information that can make you or your product create the first
-                impression.
+                Lunatrading is a website aimed at traders who want to take their research and due diligence to the next level. Our countless features will ensure you are well informed for your next trade.
               </h3>
             </Grid>
             <Grid item xs={12} align="center">
               <img
-                style={{ height: "auto", width: "100%", borderRadius: "6px" }}
-                alt="panda"
-                src="https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2019-04/3ED6FCAB-D280-4197-8B02-BCCD9846076A.jpg?itok=EKczHCGX"
+                style={{ height: "auto", width: "50%", borderRadius: "6px", padding: "0 0" }}
+                alt="nasdaq sign"
+                src={background_image2}
               />
             </Grid>
           </div>
