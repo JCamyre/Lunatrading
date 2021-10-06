@@ -58,7 +58,7 @@ export default function Home() {
           <div
             className="container"
             style={{
-              marginRight: "350px",
+              marginRight: "360px",
               width: "1400px",
               fontWeight: "300px",
               fontFamily: ["Roboto", "Helvetica"],
@@ -71,12 +71,12 @@ export default function Home() {
           >
             <Grid item xs={12} align="center">
               <h3>
-                Lunatrading is a website aimed at traders who want to take their research and due diligence to the next level. <br/> Our countless features will ensure you are well informed for your next trade.
+                <span style={{ color: 'rgba(175, 0, 175)' }}>Lunatrading </span> is aimed at traders who want to take their research and due diligence to the next level. <br/> Our countless features will ensure you are well informed for your next trade.
               </h3>
             </Grid>
             <Grid item xs={12} align="center">
               <img
-                style={{ height: "auto", width: "50%", borderRadius: "6px", padding: "0 0" }}
+                style={{ height: "auto", width: "75%", borderRadius: "6px", padding: "0 0", marginTop: "25px" }}
                 alt="nasdaq sign"
                 src={background_image2}
               />

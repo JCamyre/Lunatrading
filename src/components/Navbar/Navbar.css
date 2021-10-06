@@ -37,6 +37,7 @@
 
 .nav-links.active {
   padding: 0 1rem;
+  height: 70px;
 }
 
 .navbar-container {

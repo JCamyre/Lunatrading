@@ -36,7 +36,7 @@ export default function Navbar(props) {
     window.addEventListener('scroll', changeBackground);
 
     return (
-        <nav style={{marginRight: "200px"}} className={navbar ? 'navbar active' : 'navbar'}>
+        <nav style={{marginRight: "300px"}} className={navbar ? 'navbar active' : 'navbar'}>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     <i className="fas fa-moon" style={{color: 'rgba(175, 0, 175)'}} /> Luna
@@ -58,11 +58,12 @@ export default function Navbar(props) {
                             About Us
                         </Link>
                     </li>
-                    
                     <li className='nav-item'>
                         {/* We don't want menu open once we click to go to a different page.  */}
-                        <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            Log In
+                        <Link to='/login' style={{  alignItems: "center" }} onClick={closeMobileMenu}>
+                            <Button buttonStyle='btn--outline'>
+                                Log In
+                            </Button>
                         </Link>
                     </li>
                     {/* <li className='nav-item nav-links'>
@@ -81,7 +82,7 @@ export default function Navbar(props) {
                             Toggle text size
                         </button>
                     </li> */}
-                    <Button buttonStyle='btn--outline'>
+                    <Button style={{alignItems: "center" }} buttonStyle='btn--outline'>
                         Log In
                     </Button>
                     <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
