@@ -60,43 +60,13 @@ export default function Navbar(props) {
                     </li>
                     <li className='nav-item'>
                         {/* We don't want menu open once we click to go to a different page.  */}
-                        <Link to='/login' style={{  alignItems: "center" }} onClick={closeMobileMenu}>
+                        <Link to='/login' className={'nav-button'} onClick={closeMobileMenu}>
                             <Button buttonStyle='btn--outline'>
                                 Log In
                             </Button>
                         </Link>
                     </li>
-                    {/* <li className='nav-item nav-links'>
-                        <ToggleMode />
-                    </li> */}
-                    {/* <li className='nav-item'>
-                        <button
-                            onClick={e =>
-                            props.theme.setTheme(
-                                props.theme.textZoom === 'normal'
-                                ? { ...theme, textZoom: 'magnify' }
-                                : { ...theme, textZoom: 'normal' }
-                            )
-                            }
-                        >
-                            Toggle text size
-                        </button>
-                    </li> */}
-                    <Button style={{alignItems: "center" }} buttonStyle='btn--outline'>
-                        Log In
-                    </Button>
-                    <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
-                        Log In 2
-                    </Link>
                 </ul>
-
-                {/* {button && (
-                    <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
-                        <Button buttonStyle='btn--outline'>
-                            Log In
-                        </Button>
-                    </Link>
-                )} */}
             </div>
         </nav >
     )
