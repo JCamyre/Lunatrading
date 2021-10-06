@@ -34,9 +34,14 @@ SECRET_KEY = os.environ['DJANGO_REACT_HEROKU_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+<<<<<<< HEAD
 # ALLOWED_HOSTS = [*]
 # If you turned cors_origin allow all off
 ALLOWED_HOSTS = ["lunatrading.herokuapp.com", "localhost", "127.0.0.1:8000"]
+=======
+ALLOWED_HOSTS = ["https://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
+                 "localhost", "127.0.0.1:8000"]
+>>>>>>> 46c95777cff5b8c25107abd87d5f861898e17fd6
 
 
 # Application definition
@@ -48,12 +53,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'corsheaders',
+    'rest_framework',
     'stocks',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -61,8 +69,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 # "Serve its own static files", I'm assuming means the "slug"/program can store its own files, rather than using external serve to host and store files.
@@ -102,7 +108,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # The idea here is to clear the DATABASES variable and then set the 'default' key using the dj_database_url module. This module uses Heroku’s DATABASE_URL variable if it’s on Heroku, or it uses the DATABASE_URL we set in the .env file if we’re working locally.
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
+# Know how to connect to a database normally, just add all information for the PostgreSQL server or whatever you are using to the DATABASE variable.
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -140,18 +146,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-
 # Storing static files ourself.
 # refers to other directories where Django will collect the static files as well
 # In this case, it is pointing to React's 'build/static' directory which contains the static files for frontend when Heroku builds the React app using npm run build during deployment.
 # Since the production version of django project is called "build" when running "yarn/npm run build"
+
+# points to directory/folder that stores static files
+
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static')
 ]
 
 # points to directory/folder that stores static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'build/staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Configure Django app for Heroku
 django_heroku.settings(locals())

@@ -4,6 +4,9 @@ from py_trading.download_tickers import get_nasdaq, get_nyse
 import concurrent.futures
 import pandas as pd
 
+# I should refactor code and put more of logic from views.py into here.
+# How would Model View Controller project have the logic
+
 
 def add_stocks():  # Only run if you need to reset the Stock objects
     # unique_stocks = set()

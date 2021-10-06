@@ -1,5 +1,5 @@
 from django.db.models import CASCADE, CharField, ForeignKey, Model, DateTimeField, SlugField
-from django_mysql.models import ListCharField
+# from django_mysql.models import ListCharField
 # from django.contrib.auth.models import User
 from django.utils import timezone
 from django.urls import reverse
@@ -11,11 +11,11 @@ import py_trading as py_trd
 class Portfolio(Model):
 
     portfolio_name = CharField(max_length=100)
-    stocks = ListCharField(
-        base_field=CharField(max_length=6),
-        size=50,
-        max_length=(50 * 11)
-    )
+    # stocks = ListCharField(
+    #     base_field=CharField(max_length=6),
+    #     size=50,
+    #     max_length=(50 * 11)
+    # )
     date_posted = DateTimeField(default=timezone.now)
     # author = ForeignKey(User, on_delete=CASCADE)
 

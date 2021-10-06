@@ -30,7 +30,12 @@ router.register(r'stocks', views.StocksView, 'stock')
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('api/', include(router.urls))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+=======
+    path('stocks/', include('stocks.urls'))  # Is it better to name this api/?
+]
+>>>>>>> 46c95777cff5b8c25107abd87d5f861898e17fd6
 
 # I should redesign how the backend server does calculations. Better url names, etc.
