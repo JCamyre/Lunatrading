@@ -35,7 +35,7 @@ SECRET_KEY = os.environ['DJANGO_REACT_HEROKU_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ["https://lunatrading.herokuapp.com", "lunatrading.herokuapp.com",
-                 "localhost:8000", "127.0.0.1:8000", "lunatrading-env.eba-ufm72asu.us-west-1.elasticbeanstalk.com"]
+                 "localhost:8000", "127.0.0.1:8000", "lunatrading-env.eba-mw2zcgsu.us-west-1.elasticbeanstalk.com"]
 
 
 # Application definition

@@ -1,43 +1,20 @@
 version: "3.2"
-
 services:
-
-backend:
-
-container_name: backend
-
-env_file:
-
-- ./backend/.env
-
-build: 
-
-context: ./backend
-
-dockerfile: Dockerfile
-
-ports:
-
-- "8000:8000"
-
-frontend:
-
-container_name: frontend
-
-env_file:
-
-- ./frontend/.env
-
-build: 
-
-context: ./frontend
-
-dockerfile: Dockerfile
-
-ports:
-
-- "3000:3000"
-
-depends_on:
-
-- backend
+  backend:
+    container_name: backend
+    env_file:
+      - ./backend/.env
+    build: 
+      context: ./backend
+    ports:
+      - "8000:8000"
+  frontend:
+    container_name: frontend
+    env_file:
+      - ./frontend/.env
+    build: 
+      context: ./frontend 
+    ports:
+      - "3000:3000" 
+    depends_on:
+      - backend

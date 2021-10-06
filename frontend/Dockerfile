@@ -1,24 +1,20 @@
-FROM ubuntu:18.04
+FROM node:14.17.0-alpine
 
-RUN apt-get update \
+WORKDIR /app/frontend
 
-&& apt-get install -y vim \
+ENV PATH /app/frontend/node_modules/.bin:$PATH
 
-&& apt-get install -y nodejs \
+COPY package.json ./
 
-&& apt-get install -y npm 
+COPY package-lock.json ./
 
-WORKDIR /src/frontend
+RUN npm install --silent
 
-COPY package.json /src/frontend/
+RUN npm install react-scripts@3.4.1 -g --silent
 
-RUN npm install -g npm@latest
+COPY . ./
 
-RUN npm i --package-lock-only
-
-RUN npm install
-
-COPY . /src/frontend/
+RUN npm run build
 
 EXPOSE 3000
 
