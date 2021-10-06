@@ -77,7 +77,7 @@ export default function Home() {
               <img
                 style={{ height: "auto", width: "50%", borderRadius: "6px", padding: "0 0" }}
                 alt="nasdaq sign"
-                src={background_image2}
+                // src={background_image2}
               />
             </Grid>
           </div>

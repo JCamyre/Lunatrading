@@ -30,7 +30,7 @@ router.register(r'stocks', views.StocksView, 'stock')
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('stocks/', include(router.urls))  # Is it better to name this api/?
+    path('stocks/', include('stocks.urls'))  # Is it better to name this api/?
 ]
 
 # I should redesign how the backend server does calculations. Better url names, etc.
