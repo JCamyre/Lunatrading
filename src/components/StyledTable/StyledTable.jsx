@@ -11,8 +11,11 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
-    maxWidth: 850
+    maxWidth: 850,
   },
+  row: {
+      fontSize: "30px"
+  }
 });
 
 export default function InfoTable(props){
@@ -31,15 +34,15 @@ export default function InfoTable(props){
             <Table className={classes.table}>
                 <TableHead>
                     <TableRow>
-                        <TableCell align='center'>Label</TableCell>
-                        <TableCell align='center'>Value</TableCell>
+                        {/* <TableCell align='center'>Label</TableCell>
+                        <TableCell align='center'>Value</TableCell> */}
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {!isLoading && (
                         <>
                             {tableData.map((row) => (
-                                <TableRow key={row[0]}>
+                                <TableRow className={row.table} key={row[0]}>
                                     <TableCell align='center'>{row[0]}</TableCell>
                                     <TableCell align='center'>{row[1]}</TableCell>
                                 </TableRow>

@@ -61,8 +61,8 @@ export default function Navbar(props) {
                     
                     <li className='nav-item'>
                         {/* We don't want menu open once we click to go to a different page.  */}
-                        <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                            Sign Up
+                        <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
+                            Log In
                         </Link>
                     </li>
                     {/* <li className='nav-item nav-links'>
@@ -81,8 +81,21 @@ export default function Navbar(props) {
                             Toggle text size
                         </button>
                     </li> */}
+                    <Button buttonStyle='btn--outline'>
+                        Log In
+                    </Button>
+                    <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
+                        Log In 2
+                    </Link>
                 </ul>
-                {button && <Button buttonStyle='btn--outline'>Sign Up</Button>}
+
+                {/* {button && (
+                    <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>
+                        <Button buttonStyle='btn--outline'>
+                            Log In
+                        </Button>
+                    </Link>
+                )} */}
             </div>
         </nav >
     )

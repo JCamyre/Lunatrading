@@ -4,7 +4,7 @@ import Home from "./components/pages/Home/Home";
 import Stock from "./components/pages/Stock/Stock";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/pages/About/About";
-// import SignIn from "./components/pages/SignIn";
+import LogIn from "./components/pages/LogIn/LogIn";
 // import SignUp from "./components/pages/SignUp";
 import ContactUs from "./components/pages/ContactUs/ContactUs";
 import Footer from "./components/Footer/Footer";
@@ -74,6 +74,7 @@ function App() {
             <Route path="/stock/:ticker" component={Stock} />
             <Route path="/about" component={About} />
             <Route path="/contactus" component={ContactUs} />
+            <Route path="/login" component={LogIn} />
           </Switch>
           <Footer />
         </Router>

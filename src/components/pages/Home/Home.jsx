@@ -70,14 +70,13 @@ export default function Home() {
           >
             <Grid item xs={12} align="center">
               <h3>
-                Lunatrading is a website aimed at traders who want to take their research and due diligence to the next level. Our countless features will ensure you are well informed for your next trade.
+                Lunatrading is a website aimed at traders who want to take their research and due diligence to the next level. <br/> Our countless features will ensure you are well informed for your next trade.
               </h3>
             </Grid>
             <Grid item xs={12} align="center">
               <img
                 style={{ height: "auto", width: "50%", borderRadius: "6px", padding: "0 0" }}
                 alt="nasdaq sign"
-                // src={background_image2}
               />
             </Grid>
           </div>

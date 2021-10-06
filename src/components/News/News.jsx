@@ -43,7 +43,7 @@ function News(ticker) {
             {!isLoading && !isNews && (
                 <h3>Sorry, there is no news!</h3>
             )}
-            <h1>${ typeof(ticker) === 'string' ? (ticker + ' News:') : ''}</h1>
+            <h1 style={{color: 'rgba(175, 0, 175)'}}>${ typeof(ticker) === 'string' ? (ticker + ' News:') : ''}</h1>
             {isLoading && (
                 <>
                     <div style={{height: '100px', padding:'40px 0px'}}>
@@ -65,7 +65,7 @@ function News(ticker) {
                     ))}
                 </>
             )}
-            <h1>Sector(s) news:</h1>
+            <h1 style={{color: 'rgba(175, 0, 175)'}}>Sector(s) news:</h1>
             {isLoading && (
                 <>
                     <div style={{height: '100px', padding:'40px 0px'}}>
