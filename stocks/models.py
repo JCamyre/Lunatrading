@@ -30,9 +30,9 @@ class Portfolio(Model):
 class Stock(Model):
     # Stores all information for a stock (including the due diligence)
     # Change to only ticker Charfield, then in the views search results do all the functions?
-    ticker = CharField(max_length=5)
-    name = CharField(max_length=250)
-    slug = SlugField(max_length=5, default=ticker)
+    ticker = CharField(max_length=5, default='AAPL')
+    name = CharField(max_length=250, default='AAPL')
+    slug = SlugField(max_length=5, default='AAPL')
 
     # def due_diligence(self): # Is this better than a variable named due_diligence = lambda _: stock_obj.due_diligence()
     #     stock_obj = py_trd.Stock(self.ticker)
