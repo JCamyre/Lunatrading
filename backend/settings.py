@@ -163,6 +163,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
 
+AWS_CLOUDFRONT_KEY = os.environ.get('AWS_CLOUDFRONT_KEY', None).encode('ascii') 
+AWS_CLOUDFRONT_KEY_ID = os.environ.get('AWS_CLOUDFRONT_KEY_ID', None)
+
+STATICFILES_STORAGE = 'backend.settings.StaticStorage' # yo what
+
+
 # DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
