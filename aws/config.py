@@ -10,7 +10,7 @@ AWS_QUERYSTRING_AUTH = True
 
 DEFAULT_FILE_STORAGE = 'aws.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'aws.utils.StaticRootS3BotoStorage'
-AWS_STORAGE_BUCKET_NAME = os.environ.get('BUCKET_NAME')
+AWS_STORAGE_BUCKET_NAME = 'lunatrading-static' # os.environ.get('BUCKET_NAME')
 
 S3DIRECT_REGION = 'us-west-1'
 

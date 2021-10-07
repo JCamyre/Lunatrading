@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 # "Serve its own static files", I'm assuming means the "slug"/program can store its own files, rather than using external serve to host and store files.
 # "self-contained unit", no nginx or Amazon S3
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+AWS_DEFAULT_ACL = None
 
 
 CORS_ORIGIN_WHITELIST = [
