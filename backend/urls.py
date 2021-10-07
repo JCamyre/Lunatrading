@@ -32,8 +32,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('stocks/', include('stocks.urls')),  # Is it better to name this api/?
-    path('rest-auth/facebook/', FacebookLogin.as_view(), name='fb_login'),
-    path('rest-auth/google/', GoogleLogin.as_view(), name='google_login')
+    path('api/v1/users/', include('users.urls'))
 ]
 
 # I should redesign how the backend server does calculations. Better url names, etc.

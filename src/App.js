@@ -14,7 +14,6 @@ import useTheme from "./components/UseTheme/useTheme";
 import style from "styled-theming";
 import axios from "axios";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 
 axios.defaults.xsrfCookieName = "csrftoken";
