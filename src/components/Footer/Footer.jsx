@@ -22,7 +22,7 @@ function Footer() {
                             <div class='icon instagram'>
                                 <div class='tooltip'>Instagram</div>
                                     <span>
-                                        <a className='footer-logo' href='https://www.instagram.com/realmizkif/' target='_blank' rel='noreferrer noopener'>
+                                        <a className='footer-logo' href='https://www.instagram.com/j_camyre/' target='_blank' rel='noreferrer noopener'>
                                             <i className='fab fa-instagram' style={{fontSize: '24px'}}/>
                                         </a>
                                     </span>
