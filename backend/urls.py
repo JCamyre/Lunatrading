@@ -20,7 +20,6 @@ from stocks import views
 from .views import index
 from django.conf import settings
 from django.conf.urls.static import static
-from social_login.views import FacebookLogin, GoogleLogin
 
 router = routers.DefaultRouter()
 router.register(r'stocks', views.StocksView, 'stock')
