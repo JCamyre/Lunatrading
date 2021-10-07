@@ -14,6 +14,8 @@ import useTheme from "./components/UseTheme/useTheme";
 import style from "styled-theming";
 import axios from "axios";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -75,7 +77,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/contactus" component={ContactUs} />
             <Route path="/login" component={LogIn} />
-            <Route path="/signup" component={SignUp} />
+            {/* <Route path="/signup" component={SignUp} /> */}
           </Switch>
           <Footer />
         </Router>

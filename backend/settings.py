@@ -50,7 +50,20 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'stocks',
+    'social_login',
+    'django.contrib.sites',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
 ]
+
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

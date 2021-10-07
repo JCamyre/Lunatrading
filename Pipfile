@@ -66,6 +66,8 @@ Pillow = "==8.2.0"
 pyOpenSSL = "==20.0.1"
 PySocks = "==1.7.1"
 Werkzeug = "==1.0.1"
+django-rest-auth = "*"
+django-allauth = "*"
 
 [requires]
 python_version = "3.8"
