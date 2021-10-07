@@ -58,11 +58,13 @@ class GetStockInfo(APIView):
                 data = StockSerializer(stock).data
                 # Idk how to access data likes this
                 data['ticker'] = stock.ticker
+
                 # Have to have attribute for Stock models for the due_diligence information
                 try:
                     current_stock = Stock.objects.all().filter(
                         ticker=stock.ticker)[0].ticker
                     current_stock = py_trading.Stock(current_stock)
+                    print(current_stock)
                 except:
                     print('ERROR')
                     return Response({'Stock not found': 'Not supported exchange.'}, status=status.HTTP_404_NOT_FOUND)
