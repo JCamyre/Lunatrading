@@ -20,7 +20,6 @@ from stocks import views
 from .views import index
 from django.conf import settings
 from django.conf.urls.static import static
-from . import settings
 
 router = routers.DefaultRouter()
 router.register(r'stocks', views.StocksView, 'stock')
@@ -32,8 +31,6 @@ urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('stocks/', include('stocks.urls')),  # Is it better to name this api/?
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
-    path(r'^static/(?P<path>.*)$', 'django.views.static.serve', document_root=settings.STATIC_ROOT)
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # I should redesign how the backend server does calculations. Better url names, etc.
