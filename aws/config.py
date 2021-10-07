@@ -16,6 +16,7 @@ S3DIRECT_REGION = 'us-west-1'
 
 S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 
+# maybe have to do /static/media
 MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 
 MEDIA_ROOT = MEDIA_URL
