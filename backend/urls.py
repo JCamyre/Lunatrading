@@ -33,7 +33,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('stocks/', include('stocks.urls')),  # Is it better to name this api/?
     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
-    path('', (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}))
+    path(r'^static/(?P<path>.*)$', 'django.views.static.serve', document_root=settings.STATIC_ROOT)
 ]
 
 # I should redesign how the backend server does calculations. Better url names, etc.
