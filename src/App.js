@@ -5,7 +5,7 @@ import Stock from "./components/pages/Stock/Stock";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/pages/About/About";
 import LogIn from "./components/pages/LogIn/LogIn";
-// import SignUp from "./components/pages/SignUp";
+import SignUp from "./components/pages/SignUp/SignUp";
 import ContactUs from "./components/pages/ContactUs/ContactUs";
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
@@ -75,6 +75,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route path="/contactus" component={ContactUs} />
             <Route path="/login" component={LogIn} />
+            <Route path="/signup" component={SignUp} />
           </Switch>
           <Footer />
         </Router>

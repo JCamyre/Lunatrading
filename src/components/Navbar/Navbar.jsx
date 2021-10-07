@@ -58,13 +58,17 @@ export default function Navbar(props) {
                             About Us
                         </Link>
                     </li>
-                    <li className='nav-item'>
+                    <li className='nav-item nav-button'>
                         {/* We don't want menu open once we click to go to a different page.  */}
-                        <Link to='/login' className={'nav-button'} onClick={closeMobileMenu}>
-                            <Button buttonStyle='btn--outline'>
+                            <Button url='/login' buttonStyle='btn--outline'>
                                 Log In
                             </Button>
-                        </Link>
+                    </li>
+                    <li className='nav-item nav-button'>
+                        {/* We don't want menu open once we click to go to a different page.  */}
+                            <Button url='/signup' buttonStyle='btn--outline'>
+                                Sign Up
+                            </Button>
                     </li>
                 </ul>
             </div>
