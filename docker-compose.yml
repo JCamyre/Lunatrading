@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./web/:/usr/src/web/
+    ports:
+      - 8000:8000
+      - 3000:3000
+      - 35729:35729
+    env_file:
+      - ./.env.dev
+    stdin_open: true

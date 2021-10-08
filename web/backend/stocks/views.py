@@ -47,6 +47,8 @@ class UpdatePortfolioView(APIView):
 
 class GetStockInfo(APIView):
     serializer_class = StockSerializer
+    
+    # add_stocks()
 
     def get(self, request, format=None):
         ticker = request.GET['ticker'].upper()
