@@ -195,10 +195,14 @@ class GetSearchedStock(APIView):
 
     def get(self, request, format=None):
         ticker = request.GET['queried_ticker']
+        print(ticker)
+        add_stocks()
         queried_stocks = Stock.objects.filter(ticker__startswith=ticker)
+        print(ticker, queried_stocks)
         queried_stocks = [{'ticker': StockSerializer(stock).data['ticker'], 'name': StockSerializer(
             stock).data['name']} for stock in queried_stocks]
         data = {}
+
         data['queried_ticker'] = sorted(
             queried_stocks, key=lambda x: x['ticker'])
         print(data)

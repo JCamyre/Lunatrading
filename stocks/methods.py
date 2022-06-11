@@ -1,5 +1,4 @@
 from .models import Stock, Portfolio
-import py_trading
 from py_trading.download_tickers import get_nasdaq, get_nyse
 import concurrent.futures
 import pandas as pd
@@ -10,8 +9,12 @@ import pandas as pd
 
 def add_stocks():  # Only run if you need to reset the Stock objects
     # unique_stocks = set()
+    print(Stock.objects.first(100), 'hello')
+    print('yo1')
     Stock.objects.all().delete()
+    print('yo2')
     nasdaqStocks = get_nasdaq()
+    print('yo3')
     nyseStocks = get_nyse()
     allStocks = pd.concat([nasdaqStocks, nyseStocks])
 

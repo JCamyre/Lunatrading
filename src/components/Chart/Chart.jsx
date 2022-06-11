@@ -3,7 +3,6 @@ import TradingViewWidget, { Themes, BarStyles } from 'react-tradingview-widget';
 
 // https://github.com/rafaelklaessen/react-tradingview-widget
 
-// const StockChart = () => {
 function StockChart(props) {
 
   return (
